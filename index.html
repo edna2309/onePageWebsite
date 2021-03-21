@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lila's Art</title>
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/budhhism/48/Religion_Buddhism_Outline-15-512.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       var i=0;
+       var a;
+       function show(){
+            var x = document.getElementById('hidden');
+       }
+
+      function promijeniSliku() {
+        var x =document.getElementById('main-container');
+        clearTimeout(a);
+        if(i==0){
+            x.style.backgroundImage = "url('images/pic1.jpg')";
+            i++;
+        }
+        else if(i==1){
+            x.style.backgroundImage = "url('images/pic2.jpg')";
+            i++;
+            }
+        else if(i==2){
+            x.style.backgroundImage = "url('images/pic3.jpg')";
+            i=0;
+        }
+        }
+        function promijeniSlikuBezKlika() {
+            var x =document.getElementById('main-container');
+            
+            if(i==0){
+                x.style.backgroundImage = "url('images/pic1.jpg')";
+                i++;
+            }
+            else if(i==1){
+                x.style.backgroundImage = "url('images/pic2.jpg')";
+                i++;
+                }
+            else if (i==2){
+                x.style.backgroundImage = "url('images/pic3.jpg')";
+                i=0;
+            }
+            a= setTimeout("promijeniSlikuBezKlika()", 3000);
+        }
+       
+        window.onload = promijeniSlikuBezKlika;
+        
+        $(document).ready(function(){
+            $('#hidden').hide();
+
+            $('#readMore').click(function(){
+                $(this).slideUp(300);        
+                $('#hidden').delay(500).slideDown(500);
+            })
+        })
+        
+    </script>
+    
+</head>
+<body>
+    <div class="page">
+        <header>
+            <!--Navigacija-->
+          <div class="inner-header">
+                <div class="logo-container">
+                  <h1>Lila's<span>Art</span></h1>
+                </div>
+                    <ul id="main-navigation">
+                        <a href="#" class="dgm"><li>Home</li></a>
+                        <a href="#about" class="dgm"><li>About me</li></a>
+                        <a href="#portfolio" class="dgm"><li>Portfolio</li></a>
+                        <a href="#forma" class="dgm"><li>Contact</li></a>
+                    </ul>
+           </div>
+        </header>
+        <!--Main section-->
+        <div id="main-container" onclick='promijeniSliku()' style="min-height: 600px;">
+            <div class="text">
+                <h1>Get a commission TODAY!</h1>
+                <a href="#forma" class="dgm">GET ONE NOW</a>
+            </div>
+        </div>
+
+        <!--About me section-->
+        <div id="about">
+                <img src="images/slika1.jpg" class="rounded-circle" alt="" style="width: 100%;">
+                <div class="about-text">
+                <h1>About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus illo expedita officia ab mollitia tempora cumque consectetur ea earum quas necessitatibus officiis modi delectus commodi quos consequatur facilis qui pariatur quasi, placeat minima voluptates eius. Ipsa nesciunt, doloremque suscipit delectus nemo eveniet libero quia facilis aperiam voluptatum iusto veritatis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus illo expedita officia ab mollitia tempora cumque consectetur ea earum quas necessitatibus.
+                    <a class="dgm" id="readMore">Read more</a>                    
+                </p>
+                <p id="hidden">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus illo expedita officia ab mollitia tempora cumque consectetur ea earum quas necessitatibus officiis modi delectus commodi quos consequatur facilis qui pariatur quasi, placeat minima voluptates eius. Ipsa nesciunt, doloremque suscipit delectus nemo eveniet libero quia facilis aperiam voluptatum iusto veritatis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus illo expedita officia
+                </p>
+                
+            </div>
+        </div>
+        
+        <!--What others say about my art-->
+        <div class="info">
+            <h1>What others say about me</h1>
+                <div class="boxes">
+                <div class="box box-1">
+                    <p>“I don’t always clop, but when I do, it’s because of Lila.”</p>
+                    <strong>Maudie Z.</strong>
+                </div>
+                <div class="box box-2">
+                    <p>“I will recommend you to my colleagues. It’s really wonderful.”</p>
+                    <strong>Thebault N.</strong>
+                </div>
+                <div class="box box-3">
+                    <p>“Needless to say we are extremely satisfied with the results.”</p>
+                    <strong>Charlot M.</strong>
+                </div>
+                <div class="box box-4">
+                    <p>“Really good. I can’t say enough about Lila. I use Lila often. Lila is worth much more than I paid.”.</p>
+                    <strong>Waiter D.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!--Portfolio-->
+        <div id="portfolio">
+            <h1>Best of me</h1>
+            <div class="pictures">
+                <img src="images/p1.jpg" class = "pic d-1" alt="">
+                <img src="images/p3.jpg" class = "pic k-1" alt="">
+                <img src="images/p4.jpg" class = "pic k-2"  alt="">
+                <img src="images/p2.jpg" class = "pic d-2" alt="">
+                <img src="images/p5.jpg" class = "pic k-3" alt="">
+                <img src="images/p6.jpg" class = "pic k-4"  alt=""> 
+    
+            </div>
+
+        </div>
+        <footer>
+            <!--forma-->
+        <div id="forma">
+            <h1>Contact me</h1>
+            <p>I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+            <form action='sendMail' method='get' class='contact-form'>
+                    <label for='full-name'>Name</label>
+                    <input id='full-name' name='full-name' type='text'/>
+                    <label for='email'>Email address</label>
+                    <input id='email' name='email' type='text'/>
+                    <label for='message'>Message</label>
+                    <textarea name="" id="message"></textarea>
+                    <a href="#" id="submit-dgm"class="dgm">Submit</a>
+            </form>
+          </div>
+            <!--all rights reserved fazon-->
+            <p class='copyright'>&copy; 2020 Lila All rights reserved </p>
+          
+        </footer>
+    </div>
+</body>
+</html>
+

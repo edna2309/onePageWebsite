@@ -1,0 +1,789 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: 0.25s ease-out;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Century Gothic';
+}
+html {
+    scroll-behavior: smooth;
+    height: 1vh;
+  }
+:root{
+    --primary: rgb(180, 143, 202)!important;
+    --shadow: 0 1px 10px rgba(70, 70, 70, 0.8);
+}
+.dgm:hover{
+    background-color: var(--primary) !important;
+    text-decoration: none;
+    color: white;
+}
+body{
+    width: 100%;
+}
+.page{
+    width: 100%;
+}
+/*header*/
+header{
+    width: 100%;
+    min-height: 70px;
+    display: block;
+    background-color: #101010;
+    position: fixed;
+    top: 0; 
+}
+.inner-header{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+/*logo*/
+.logo-container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.logo-container h1{
+    color: var(--primary);
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2.8rem;
+    font-weight: 200;
+    font-family:'Caveat';
+    padding-top: 5px;
+}
+.logo-container h1 span{
+    font-weight: 800;
+    font-family: 'Caveat';
+}
+/*navigacija*/
+#main-navigation{
+    float: right;
+    height: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+#main-navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 15px 20px;
+    color: white;
+    text-transform: uppercase;
+}
+#main-navigation a:hover{
+    text-decoration: none;
+    color: var(--primary);
+    background-color: transparent !important;
+}
+#main-navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    font-size: 1.1rem;
+}
+/*glavna sekcija/kontejner*/
+#main-container{
+    margin-top: 70px;
+    background-image: url('images/pic1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    transition: 0.5s ease-out;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;    
+}
+/*div sa tekstom unutar glavnog kontejnera*/
+.text{
+    margin: 35px 80px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-items: center;
+}
+#main-container h1{
+    color: white;
+    font-family: 'Caveat';
+    font-size: 70px;
+}
+#main-container a{
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px auto;
+    width: 30%;
+    background-color: rgba(165, 165, 165, 0.336);
+    padding: 15px;
+    border-radius: 8px;
+}
+/*about me sekcija*/
+#about{
+    margin: 80px 80px;
+    background: rgb(255, 255, 255);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.about-text{
+    padding: 40px;
+}
+.about-text p, .about-text a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-text p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.about-text h1{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 65px;
+    font-family: 'Caveat';
+}
+.about-text a{
+    margin-top: 30px;
+    background-color: rgba(104, 104, 104, 0.479);
+    padding: 10px;
+    width: 150px;
+    text-transform: uppercase;
+    font-weight:lighter;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+}
+#about img{
+    display: flex;
+    align-self: center;
+}
+/*what others say about me sekcija*/
+.info{
+    display: grid;
+    background-image: url('images/bc1.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.info h1{
+    color: white;
+    margin-bottom: 70px;
+    text-align: center;
+    font-family: 'Caveat';
+    font-size: 65px;
+}
+.boxes{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 200px;
+}
+
+.box{
+    background: rgba(165, 165, 165, 0.103);
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+.box:hover{
+    background: rgba(202, 202, 202, 0.192);
+}
+/*portofolio -> best of me sekcija*/
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 30px;
+}
+.pictures img{
+    width: 100%;
+}
+#portfolio{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+#portfolio h1{
+    font-family: 'Caveat';
+    text-align: center;
+    margin-top: 50px;
+    font-size: 65px;
+    padding-bottom: 20px;
+}
+/*slike iz portfolia*/
+.pic:hover
+    {
+      -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 10px rgb(128, 128, 128);
+      box-shadow: 0 0 10px black;;
+    }
+.d-1 { 
+    grid-area: 1 / 1 / 3 / 2;
+    align-self: center; 
+}
+.k-1 { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.k-2 { 
+    grid-area: 2 / 2 / 3 / 3; 
+}
+.d-2{ 
+    grid-area: 1 / 3 / 3 / 4; 
+    align-self: center;
+}
+.k-3 { 
+    grid-area: 1 / 4 / 2 / 5; 
+}
+.k-4 { 
+    grid-area: 2 / 4 / 3 / 5;
+ }
+
+/*footer forma*/
+#forma{
+    margin-top: 30px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-image: url('images/bc1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+#forma h1, 
+#forma p{
+    display: flex;
+    justify-content: center;
+
+}
+#forma h1{
+    padding-top: 30px;
+    font-family: 'Caveat';
+    font-size: 65px;
+    padding-bottom: 20px;
+}
+#forma p{
+    font-size: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+.contact-form {
+    color: white;
+    border-radius: 5px;
+    width: 55%;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 18px;
+}
+#message{
+    height: 200px;
+    resize: none;
+    background-color: rgba(255, 255, 255, 0.192); 
+    border: 1px solid rgba(118, 87, 119, 0.432);
+    
+    border-radius: 5px;
+}
+#full-name, 
+#email{
+    height: 50px;
+    border: 1px solid rgba(118, 87, 119, 0.349);    
+    border-radius: 5px;
+}
+.contact-form input[type='text'],  
+.contact-form input[type='email'] {
+    background-color: rgba(255, 255, 255, 0.192); 
+   
+}
+#full-name,
+#email,
+#message{
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+#submit-dgm{
+    display: flex;
+    padding: 12px;
+    width: 200px;
+    align-self: center;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    color: white;
+    margin-top: 14px;
+    background-color: rgba(192, 192, 192, 0.288);
+    border-radius: 8px;
+    font-weight: bold;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+/*paragraf u footeru*/
+.copyright{
+    display: flex;
+    height: 80px;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+/*****************media query*****************/
+
+/* Tableti */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /*********main-container**********/
+    /*slike u main container-u*/
+    #main-container{
+        width: 100%;
+    }
+    /*h1 u main container-u*/
+    #main-container h1{
+        font-size: 55px;
+        text-align: center;
+        width: 100%;
+    }
+    .text{
+        margin: 15px auto;
+    }
+    /*dugme u main container-u*/
+    #main-container a{
+        width: 35%;
+    }
+    /*********about sekcija*********/
+    #about{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+    }
+    /*slika u about sekciji*/
+    #about img{
+        order: 1;
+    }
+    .about-text{
+        font-size: 15px;
+    }
+    /**********info sekcija**********/
+    .boxes{
+        padding: 0px 10px;
+    }
+    /******portfolio******/
+    .pictures{
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+    }
+    
+    #portfolio h1{
+        padding: 0;
+    }
+    .d-1 { 
+        grid-area: 1 / 1 / 3 / 2;
+        display: flex;
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+    .d-2
+     { 
+        grid-area: 3 / 1 / 5 / 2;
+        display: flex;
+        align-self: flex-start;
+        margin-top: 10px;
+     }
+    .k-4{ 
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .k-1 { 
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .k-2 { 
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .k-3 { 
+        grid-area: 4 / 2 / 5 / 3;    
+    }
+    .k-1,
+    .k-2,
+    .k-3,
+    .k-4{
+        margin: 10px 5px;
+    }
+     /*********contact forma********/
+     #forma{
+        width: 100%;
+        padding: 0;
+    }
+    #forma p{
+        font-size: 1rem;
+        width: 80%;
+    }
+    .contact-form{
+        margin-top: 15px;
+        padding: 15px;
+        width: 90%;
+        background-color: transparent;
+    }
+    label{
+        font-size: 1rem;
+    }
+    #submit-dgm{
+        background-color: rgba(128, 128, 128, 0.507);
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+    #full-name,
+    #email,
+    #message{
+        padding: 15px;
+        font-size: 1rem;
+        color: white;
+    }
+
+}
+/* Mali uredjaji*/
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    /***********header*********/
+    header{
+        height: 140px;
+        position: absolute;
+        width: 100%;
+    }
+    .inner-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        padding-top: 10px;
+    }
+    #main-navigation{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 5px;
+    }
+    .logo-container{
+        height: 50%;
+    }
+    .logo-container h1{
+        text-align: center;
+    }
+    #main-navigation a{
+        padding: 0 5px;
+        width: 20%;
+        text-transform: initial;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    #main-navigation a li{
+        font-size: 1rem;
+    }
+    /*********main-container**********/
+    /*slike u main container-u*/
+    #main-container{
+        width: 100%;
+        margin-top: 139px;
+    }
+    #main-container h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    #main-container a{
+        width: 70%;
+        font-size: 1.1rem;
+    }
+    #main-container .text{
+        margin: auto;
+    }
+    /*about me sekcija*/
+    #about{
+        margin-top: 30px;
+        margin-left:10px;
+        margin-right: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+    }
+    #about img{
+        order: 1;
+    }
+    .about-text p{
+        font-size: 1rem;
+    }
+    /*********info********/
+    .boxes{
+        padding: 0px 10px;
+    }
+    .boxes{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    /******portfolio******/
+    .pictures{
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+    }
+    
+    #portfolio h1{
+        padding: 0;
+    }
+    .d-1 { 
+        grid-area: 1 / 1 / 3 / 2;
+        display: flex;
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+    .d-2
+     { 
+        grid-area: 3 / 1 / 5 / 2;
+        display: flex;
+        align-self: flex-start;
+        margin-top: 10px;
+     }
+    .k-4{ 
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .k-1 { 
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .k-2 { 
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .k-3 { 
+        grid-area: 4 / 2 / 5 / 3;    
+    }
+    .k-1,
+    .k-2,
+    .k-3,
+    .k-4{
+        margin: 10px 5px;
+    }
+    /*********contact forma********/
+    #forma{
+        width: 100%;
+        padding: 0;
+    }
+    #forma p{
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    .contact-form{
+        margin-top: 15px;
+        padding: 15px;
+        width: 85%;
+        background-color: transparent;
+    }
+    label{
+        font-size: 0.9rem;
+    }
+    #submit-dgm{
+        background-color: rgba(128, 128, 128, 0.507);
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    #full-name,
+    #email,
+    #message{
+        padding: 15px;
+        font-size: 16px;
+    }
+
+}
+
+
+/*veoma mali uredjaji*/
+@media only screen and (max-width: 600px) {
+    /***********header*********/
+    header{
+        height: 140px;
+        position: absolute;
+        width: 100%;
+        
+    }
+    .inner-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    #main-navigation{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 5px;
+    }
+    .logo-container{
+        height: 50%;
+    }
+    .logo-container h1{
+        text-align: center;
+    }
+    #main-navigation a{
+        padding: 0 5px;
+        width: 20%;
+        text-transform: initial;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main-navigation a li{
+        font-size: 0.8rem;
+    }
+    /*********main-container**********/
+    /*slike u main container-u*/
+    #main-container{
+        width: 100%;
+        background-position: center;
+        margin-top: 139px;
+    }
+    #main-container h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    #main-container a{
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    .text{
+        margin: 50px auto;
+    }
+    /*about me sekcija*/
+    #about{
+        margin-top: 30px;
+        margin-left:10px;
+        margin-right: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+    }
+    #about img{
+        display: none;
+    }
+    .about-text p{
+        font-size: 16px;
+    }
+    /********info sekcija********/
+    .boxes{
+        padding: 0px 10px;
+    }
+    .boxes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    /********portfolio********/
+    .pictures{
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    #portfolio h1{
+        padding: 0;
+    }
+    .d-1 { 
+        display: none;
+    }
+    .d-2
+     { 
+        display: none;
+     }
+    .k-4{ 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    .k-1 { 
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .k-2 { 
+        grid-area: 3 / 1 / 4 / 2;;
+    }
+    .k-3 { 
+        grid-area: 4 / 1 / 5 / 2;      
+    }
+    
+    .k-1,
+    .k-2,
+    .k-3,
+    .k-4{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    /*********contact forma********/
+    #forma{
+        width: 100%;
+        padding: 0;
+    }
+    #forma p{
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    .contact-form{
+        margin-top: 15px;
+        padding: 15px;
+        width: 100%;
+        background-color: transparent;
+    }
+    label{
+        font-size: 0.9rem;
+    }
+    #full-name,
+    #email,
+    #message{
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    #submit-dgm{
+        background-color: rgba(128, 128, 128, 0.507);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+    }
+}
+
